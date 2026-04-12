@@ -1,0 +1,208 @@
+PRODUCT REQUIREMENTS DOCUMENT
+Software Engineering Concepts — 5-Page
+Educational Website
+Prepared by: Engineering Team · Assigned by: PM · Stack: HTML / CSS / JavaScript
+PROJECT TYPE
+TECH STACK
+TOTAL PAGES
+STATUS
+Static Website
+HTML · CSS · JS
+5 Pages
+Content Pending (4
+pages)
+1. PROJECT OVERVIEW
+This project involves building a multi-page static educational website on the topic of Software Engineering,
+intended for engineering students. The website will be structured across five dedicated pages, each covering
+a distinct academic topic. Page 1 (Home) content has been provided by the client. Content for Pages 2–5 is
+awaiting client delivery and will be plugged in upon receipt. The developer's responsibility is to deliver a
+complete, styled, and navigable website scaffold — fully functional with placeholder-ready content zones.
+2. PAGE SPECIFICATIONS
+P
+1
+Home Page
+Covers three content blocks: (1) What is Software Engineering, (2) Advantages of Software
+Engineering, (3) What is SDLC. Content provided by client. Hero section with site title and navigation
+entry point.
+Content ready
+P
+2
+Requirement Analysis
+Dedicated page for the Requirement Analysis phase of SDLC. Page layout and structure to be built
+now; content to be provided by client before final delivery.
+Content pending
+P
+3
+Project Scheduling
+Dedicated page covering Project Scheduling concepts and techniques. Page layout and structure to be
+built now; content to be provided by client before final delivery.
+Content pending
+P
+4
+UML Diagrams
+Dedicated page for UML Diagrams — types, notation, and use cases. This page may require
+image/diagram asset support. Page layout to be built now; content pending from client.
+Content pending
+
+P
+5
+Test Cases
+Dedicated page for Test Cases — types of testing, writing test cases, and examples. Page layout to be
+built now; content pending from client.
+Content pending
+3. FUNCTIONAL REQUIREMENTS
+ID
+Requirement
+Priorit
+y
+FR-
+01
+A persistent top navigation bar must link to all 5 pages
+Must
+FR-
+02
+Active page must be visually highlighted in the navbar
+Must
+FR-
+03
+Home page must render all three client-provided content sections in order
+Must
+FR-
+04
+Pages 2–5 must have clearly labelled placeholder zones ready for content injection
+Must
+FR-
+05
+Website must be fully navigable across all 5 pages without a backend
+Must
+FR-
+06
+Each page must have a consistent header and footer
+Should
+FR-
+07
+Smooth scroll behaviour and page transitions using JS
+Should
+FR-
+08
+Responsive layout supporting desktop and mobile viewports
+Should
+FR-
+09
+A 'back to top' button on long-scroll pages
+Could
+FR-
+10
+Mobile hamburger menu for navigation on small screens
+Could
+4. NON-FUNCTIONAL REQUIREMENTS
+ID
+Requirement
+Priorit
+y
+NFR-0
+1
+No external frameworks or libraries unless explicitly approved (vanilla HTML/CSS/JS)
+Must
+NFR-0
+2
+All 5 pages must be individual .html files in a single project folder
+Must
+
+NFR-0
+3
+CSS must be in a shared external stylesheet (style.css)
+Should
+NFR-0
+4
+Code must be clean, commented, and readable — this is a student submission
+Must
+NFR-0
+5
+Page load should work by opening .html files directly (no server required)
+Must
+NFR-0
+6
+Consistent colour scheme, typography, and spacing across all pages
+Must
+5. DELIVERABLES
+File
+Description
+index.html
+Home Page — fully populated with client content
+requirement-analysis.
+html
+Requirement Analysis page — structured layout, content slots empty
+project-scheduling.ht
+ml
+Project Scheduling page — structured layout, content slots empty
+uml-diagrams.html
+UML Diagrams page — structured layout, image-ready zones
+test-cases.html
+Test Cases page — structured layout, table-ready content zones
+style.css
+Shared stylesheet for all pages
+script.js
+Shared JS — navbar logic, scroll behaviour, interactions
+6. PROJECT MILESTONES
+Phase
+Milestone
+Details
+Phase
+1
+Setup & Scaffold
+Project folder, all 5 .html files, shared CSS + JS, navbar wired up
+Phase
+2
+Home Page Build
+All three content sections (SE intro, Advantages, SDLC) fully styled and
+rendered
+Phase
+3
+Content Handoff
+from Client
+Client delivers content for Pages 2–5; developer plugs into pre-built
+layouts
+Phase
+4
+Final Styling &
+Review
+Responsive polish, cross-page consistency check, scroll behaviour
+Phase
+5
+Delivery
+Final zipped project folder submitted / pushed to GitHub
+7. ASSUMPTIONS & DEPENDENCIES
+
+Client will provide textual content for Pages 2–5 before the Phase 3 deadline. Delays will push final delivery.
+No backend, database, or server is required. This is a purely static website.
+Google Fonts may be used for typography — considered a safe external dependency for a student project.
+UML Diagrams page may receive image assets from the client; image slots will be pre-built with defined
+dimensions.
+Test Cases page may require a table layout — developer will build a reusable table component ready for data.
+The website does not need to be deployed online; it must work locally via file:// protocol.
+8. RISKS
+Risk
+Severity
+Mitigation
+Client delays content for Pages 2–5
+High
+Build layout scaffold first; content is drop-in;
+clearly mark content zones with comments
+Inconsistent styling across pages if CSS is not
+centralised
+Medium
+Single shared style.css enforced from day one;
+no inline styles except for JS-driven overrides
+UML image assets not provided or wrong
+format
+Medium
+Pre-build image placeholder boxes with
+defined aspect ratios; accept PNG/SVG/JPG
+Scope creep — client requests animations or
+interactivity mid-build
+Medium
+Scope locked to this PRD; any additions
+require PM re-approval and timeline
+adjustment
+ PRD v1.0 · Ready for development once client signs off · Content delivery for P2–P5 is a blocking dependency
