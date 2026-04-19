@@ -33,50 +33,160 @@
         </section>
 
         <section>
-            <h2>Testing Framework</h2>
-            <p>Below is a reusable table component ready for test case data injection.</p>
+            <h2>PRACTICAL NO. 7</h2>
+            <p><strong>Aim:</strong> To design Test cases for the assigned application.</p>
+
+            <div class="card" style="margin-top: 2rem; margin-bottom: 3rem;">
+                <p style="margin-bottom: 0.5rem; font-weight: 600;">Objective:</p>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">To design and validate test cases for a system to ensure correct functionality, input validation, and security.</p>
+                
+                <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Theory: Test Case Theory (Short & Clear)</h3>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A test case is a set of conditions or steps used to verify that a software application works correctly. It helps testers check whether a feature (like login) behaves as expected.</p>
+                
+                <div class="grid-container" style="margin-top:0; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div>
+                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary); font-size: 1rem;">🔹 Key Components of a Test Case</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li><strong>Test Case ID</strong> – Unique identifier</li>
+                            <li><strong>Description</strong> – What is being tested</li>
+                            <li><strong>Test Steps</strong> – Actions to perform</li>
+                            <li><strong>Test Data</strong> – Input values</li>
+                            <li><strong>Expected Result</strong> – Expected outcome</li>
+                            <li><strong>Actual Result</strong> – Actual outcome after execution</li>
+                            <li><strong>Status</strong> – Pass/Fail</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary); font-size: 1rem;">🔹 Types of Test Cases</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                            <li><strong>Positive Test Cases</strong> – Check valid inputs (correct login)</li>
+                            <li><strong>Negative Test Cases</strong> – Check invalid inputs (wrong password)</li>
+                        </ul>
+                        
+                        <h4 style="margin-bottom: 0.75rem; color: var(--text-primary); font-size: 1rem;">🔹 Importance of Test Cases</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.7; margin-left: 1.5rem; margin-bottom: 0;">
+                            <li>Ensures software quality and reliability</li>
+                            <li>Helps identify bugs and errors</li>
+                            <li>Provides clear testing documentation</li>
+                            <li>Improves user experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <div style="overflow-x: auto;">
                 <table class="minimal-table">
                     <thead>
                         <tr>
-                            <th>Test Case ID</th>
+                            <th style="white-space: nowrap;">Test Case ID</th>
                             <th>Description</th>
-                            <th>Pre-conditions</th>
+                            <th>Test Steps</th>
+                            <th>Test Data</th>
                             <th>Expected Result</th>
+                            <th>Actual Result</th>
                             <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Placeholder rows -->
                         <tr>
-                            <td>[ TC-01 ]</td>
-                            <td>[ Pending Test Description ]</td>
-                            <td>[ Pending Pre-conditions ]</td>
-                            <td>[ Pending Result ]</td>
-                            <td>[ Status ]</td>
+                            <td>TC-01</td>
+                            <td>Mark attendance for a valid student</td>
+                            <td>Select class &rarr; Select student &rarr; Mark present &rarr; Click save</td>
+                            <td>Student ID: 101, Status: Present</td>
+                            <td>Attendance is saved successfully</td>
+                            <td>Attendance saved successfully</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
                         </tr>
                         <tr>
-                            <td>[ TC-02 ]</td>
-                            <td>[ Pending Test Description ]</td>
-                            <td>[ Pending Pre-conditions ]</td>
-                            <td>[ Pending Result ]</td>
-                            <td>[ Status ]</td>
+                            <td>TC-02</td>
+                            <td>Mark attendance for multiple students</td>
+                            <td>Select class &rarr; Mark multiple students &rarr; Click save</td>
+                            <td>Student IDs: 101,102,103</td>
+                            <td>All attendance records are saved</td>
+                            <td>All records saved correctly</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
                         </tr>
                         <tr>
-                            <td>[ TC-03 ]</td>
-                            <td>[ Pending Test Description ]</td>
-                            <td>[ Pending Pre-conditions ]</td>
-                            <td>[ Pending Result ]</td>
-                            <td>[ Status ]</td>
+                            <td>TC-03</td>
+                            <td>Generate daily attendance report</td>
+                            <td>Select date &rarr; Click generate report</td>
+                            <td>Date: 25-03-2026</td>
+                            <td>Attendance report displayed</td>
+                            <td>Report generated correctly</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-04</td>
+                            <td>View student attendance percentage</td>
+                            <td>Select student &rarr; Click view attendance</td>
+                            <td>Student ID: 101</td>
+                            <td>Correct percentage displayed</td>
+                            <td>Percentage shown correctly</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-05</td>
+                            <td>Prevent duplicate attendance entry</td>
+                            <td>Mark attendance &rarr; Try marking again for same date</td>
+                            <td>Student ID: 101, Date: 25-03-2026</td>
+                            <td>System blocks duplicate entry</td>
+                            <td>Duplicate entry blocked</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-06</td>
+                            <td>Export attendance report</td>
+                            <td>Generate report &rarr; Click export</td>
+                            <td>Format: PDF or Excel Sheet</td>
+                            <td>File downloads successfully</td>
+                            <td>File downloaded</td>
+                            <td style="color: #10b981; font-weight: 600;">Pass</td>
+                        </tr>
+                        <tr>
+                            <td>TC-07</td>
+                            <td>Mark attendance without selecting class</td>
+                            <td>Directly click mark attendance without selecting class</td>
+                            <td>No class selected</td>
+                            <td>Error message displayed</td>
+                            <td>Error shown</td>
+                            <td style="color: #ef4444; font-weight: 600;">Fail</td>
+                        </tr>
+                        <tr>
+                            <td>TC-08</td>
+                            <td>Submit attendance with missing data</td>
+                            <td>Leave some students unmarked &rarr; Click save</td>
+                            <td>Leave some student unmarked do not mark present or absent</td>
+                            <td>Error will show for full complete data</td>
+                            <td>Error displayed</td>
+                            <td style="color: #ef4444; font-weight: 600;">Fail</td>
+                        </tr>
+                        <tr>
+                            <td>TC-09</td>
+                            <td>Generate report for invalid date</td>
+                            <td>Enter future date &rarr; Generate report</td>
+                            <td>Date: 01-04-2026</td>
+                            <td>System shows invalid date error</td>
+                            <td>Invalid Date Error Displayed</td>
+                            <td style="color: #ef4444; font-weight: 600;">Fail</td>
+                        </tr>
+                        <tr>
+                            <td>TC-10</td>
+                            <td>View attendance for non-existing student</td>
+                            <td>Enter invalid student ID &rarr; Search</td>
+                            <td>Student ID: 999</td>
+                            <td>Student not found message</td>
+                            <td>Error message shown</td>
+                            <td style="color: #ef4444; font-weight: 600;">Fail</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Content Placeholder Zone -->
-            <div class="placeholder-zone" style="margin-top: 3rem;">
-                [ Pending Content: Additional Testing Details / Types of Testing ]
+            <!-- Excel / Sheet Link -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="assests/Test%20case%20sheeet.xlsx" target="_blank" style="display: inline-block; padding: 0.85rem 2rem; background-color: var(--text-primary); color: var(--bg-primary); text-decoration: none; border-radius: var(--border-radius); font-weight: 600; font-size: 1.05rem; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    📊 Download Test Case Sheet (.xlsx)
+                </a>
             </div>
         </section>
     </main>
