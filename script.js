@@ -61,4 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
         }
     });
+
+    // Global Image Modal (Zoom capability)
+    const zoomableImages = document.querySelectorAll('img.zoomable');
+    if (zoomableImages.length > 0) {
+        // Create modal container
+        const modal = document.createElement('div');
+        modal.className = 'image-modal-overlay';
+        
+        const modalImg = document.createElement('img');
+        modalImg.className = 'image-modal-content';
+        
+        modal.appendChild(modalImg);
+        document.body.appendChild(modal);
+
+        // Open modal on click
+        zoomableImages.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                modalImg.src = img.src;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // stop page scrolling
+            });
+        });
+
+        // Close modal on click
+        modal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
 });
